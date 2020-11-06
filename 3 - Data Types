@@ -1,0 +1,16 @@
+## DATA TYPES
+
+Primitive Built-in Types
+- Boolean, Character, Integer, Floating point, Double floating point, Valueless,
+Wide character
+
+# Sizes
+
+Char - 1 byte
+Int - 4 bytes
+Double - 8 bytes
+Float - 4 bytes
+Boolean - 1 byte
+
+
+* Research enums

@@ -1,0 +1,132 @@
+## VARIABLES
+
+A variable provides us with named storage that our programs can manipulate.
+Each variable in C++ has a specific type, which determines the size and layout
+of the variable's memory; the range of values that can be stored within that
+memory; and the set of operations that can be applied to the variable.
+
+bool - stores either true or false value.
+char - typically a single octet.
+int - the most natural size of integer for the machine.
+float - a single-precision floating point value.
+double - a double-precision floating point value.
+void - represents the absence of a type.
+wchar_t - a wide character type.
+
+
+C++ also allows to define various other types of variables, which we will cover
+in subsequent chapters like Enumeration, Pointer, Array, Reference,
+Data structures, and Classes.
+
+# Variable Definition in C++
+
+Format : type variable_list
+
+    ---------------------------------
+    int i, j, k;
+    char c, ch;
+    float f, salary;
+    double d;
+    ---------------------------------
+
+Variables can be initialized (assigned an initial value) in their declaration.
+The initializer consists of an equal sign followed by a constant expression
+
+    ---------------------------------
+    extern int d = 3, f = 5;    // declaration of d and f.
+    int d = 3, f = 5;           // definition and initializing d and f.
+    byte z = 22;                // definition and initializes z.
+    char x = 'x';               // the variable x has the value 'x'.
+    ---------------------------------
+
+
+# Variable Declaration in C++
+
+A variable declaration provides assurance to the compiler that there is one
+variable existing with the given type and name so that compiler proceed for
+further compilation without needing complete detail about the variable. A
+variable declaration has its meaning at the time of compilation only, compiler
+needs actual variable definition at the time of linking of the program.
+
+A variable declaration is useful when you are using multiple files and you
+define your variable in one of the files which will be available at the time of
+linking of the program. You will use extern keyword to declare a variable at any
+place. Though you can declare a variable multiple times in your C++ program, but
+it can be defined only once in a file, a function or a block of code.
+
+    -----------------------------------
+    #include <iostream>
+    using namespace std;
+
+    // Variable declaration:
+    extern int a, b;
+    extern int c;
+    extern float f;
+
+    int main () {
+       // Variable definition:
+       int a, b;
+       int c;
+       float f;
+
+       // actual initialization
+       a = 10;
+       b = 20;
+       c = a + b;
+
+       cout << c << endl ;
+
+       f = 70.0/3.0;
+       cout << f << endl ;
+
+       return 0;
+    }
+    ------------------------------------
+
+
+# Lvalues and Rvalues
+
+There are two kinds of expressions in C++ −
+
+lvalue − Expressions that refer to a memory location is called "lvalue"
+expression. An lvalue may appear as either the left-hand or right-hand side of
+an assignment.
+
+rvalue − The term rvalue refers to a data value that is stored at some address
+in memory. An rvalue is an expression that cannot have a value assigned to it
+which means an rvalue may appear on the right- but not left-hand side of an
+assignment.
+
+Variables are lvalues and so may appear on the left-hand side of an assignment.
+Numeric literals are rvalues and so may not be assigned and can not appear on
+the left-hand side.
+
+
+## Variable Scopes
+
+A scope is a region of the program and broadly speaking there are three places,
+where variables can be declared −
+
+Inside a function or a block which is called local variables,
+
+In the definition of function parameters which is called formal parameters.
+
+Outside of all functions which is called global variables.
+
+We will learn what is a function and it's parameter in subsequent chapters. 
+Here let us explain what are local and global variables.
+
+# Local Variables
+
+Variables that are declared inside a function or block are local variables.
+They can be used only by statements that are inside that function or block of
+code. Local variables are not known to functions outside their own.
+
+# Global Variables
+
+Global variables are defined outside of all the functions, usually on top of the
+program. The global variables will hold their value throughout the life-time of
+your program.
+
+A global variable can be accessed by any function. That is, a global variable is
+available for use throughout your entire program after its declaration.

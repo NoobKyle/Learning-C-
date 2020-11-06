@@ -1,0 +1,6 @@
+## Compiling
+
+C++ programs need to be compiled to be changed to a .exe file to run.
+One can use the gcc or g++ compiler to compile c++ code.
+
+* add -lstdc++ at the end of the compile line if using gcc compiler to compile c++ code.
